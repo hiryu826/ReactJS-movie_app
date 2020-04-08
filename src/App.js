@@ -1,7 +1,11 @@
 import React from "react";
 
-function Food(props) {
-  return <h1>Hi {props.fav}</h1>;
+// function Food(props) {
+//   return <h1>Hi {props.fav}</h1>;
+// }
+
+function Food({ fav }) {
+  return <h5>Try {fav}</h5>;
 }
 
 function App() {
