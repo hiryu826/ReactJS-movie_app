@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import axios from "axios";
 
 class App extends React.Component {
   state = {
@@ -7,11 +7,17 @@ class App extends React.Component {
     movies: [],
   };
 
+  //Data Sync
+  getMovies = async () => {
+    const movies = await axios.get("https://yts.mx/api/v2/list_movies.json");
+  };
+
   // Data fetch
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({ isLoading: false });
-    }, 6000);
+    // setTimeout(() => {
+    //   this.setState({ isLoading: false });
+    // }, 6000);
+    this.getMovies();
   }
 
   render() {
