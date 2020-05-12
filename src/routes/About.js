@@ -1,7 +1,14 @@
 import React from "react";
+import "./About.css";
 
-function About() {
-  return <span>test about page</span>;
+function About(props) {
+  console.log(props);
+  return (
+    <div className="about__container">
+      <span>“The roots of hardship are bitter, but the fruits are sweet.”</span>
+      <span>− SehyunRyu</span>
+    </div>
+  );
 }
 
 export default About;
